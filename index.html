@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HLS.js Stats & Charts</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="url-input">
+    <input type="text" id="video-url" placeholder="Wprowadź URL strumienia HLS" />
+    <button id="load-video">Załaduj</button>
+  </div>
+  <div id="player-container">
+    <video id="video" controls></video>
+  </div>
+  <div id="stats">
+    <p><strong>Bitrate:</strong> <span id="bitrate">-</span> kbps</p>
+    <p><strong>Resolution:</strong> <span id="resolution">-</span></p>
+    <p><strong>Buffer Level:</strong> <span id="buffer">-</span> sec</p>
+    <p><strong>FPS:</strong> <span id="fps">-</span></p>
+  </div>
+  <div id="charts">
+    <canvas id="bitrateChart"></canvas>
+    <canvas id="bufferChart"></canvas>
+    <canvas id="fpsChart"></canvas>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+  <script src="script.js"></script>
+</body>
+</html>
